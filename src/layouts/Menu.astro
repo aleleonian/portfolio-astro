@@ -1,0 +1,34 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<div class="menu nes-container">
+  <button type="button" class="nes-btn is-primary is-icon"
+    >Projects
+    {currentPath == "projects" ? <i class="nes-icon star is-small" /> : ""}
+  </button>
+  <button type="button" class="nes-btn is-success"
+    >About
+    {currentPath == "/" ? <i class="nes-icon star is-small" /> : ""}
+  </button>
+  <button type="button" class="nes-btn is-warning"
+    >Contact
+    {currentPath == "contact" ? <i class="nes-icon star is-small" /> : ""}
+  </button>
+  <button type="button" class="nes-btn is-error"
+    >Links
+    {currentPath == "links" ? <i class="nes-icon star is-small" /> : ""}
+  </button>
+</div>
+
+<style>
+  .menu {
+    width: 50%;
+    /* text-align: center; */
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+  }
+</style>
